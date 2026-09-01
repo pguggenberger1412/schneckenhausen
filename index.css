@@ -1,0 +1,150 @@
+/* ==========================================
+   LANDING PAGE CARDS (MOBILE-FIRST)
+   ========================================== */
+
+.card-tile {
+    position: relative;
+    padding: 0; /* Entfernt Padding, damit das Bild bündig abschließt */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.card-tile:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--color-accent);
+}
+
+/* Bild-Bereich & Platzhalter (16:9 Format) */
+.card-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: var(--color-accent-light);
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-fast);
+}
+
+.card-tile:hover .card-image img,
+.card-tile:hover .image-placeholder {
+    transform: scale(1.04);
+}
+
+/* Platzhalter-Grafik & Icon */
+.image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    color: var(--color-accent);
+    transition: transform var(--transition-fast);
+}
+
+.image-placeholder svg {
+    width: 36px;
+    height: 36px;
+    opacity: 0.7;
+}
+
+.image-placeholder span {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+/* Karten-Inhalt */
+.card-content {
+    padding: 20px 16px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.card-badge {
+    align-self: flex-start;
+    background-color: var(--color-accent-light);
+    color: var(--color-primary);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+}
+
+.card-title {
+    color: var(--color-primary);
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.card-body {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    flex: 1; /* DRÜCKT DEN BUTTON IMMER NACH UNTEN */
+}
+
+/* Stretched-Link Button Styling */
+.card-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--color-primary);
+    color: #ffffff;
+    padding: 10px 18px;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    align-self: flex-start;
+    transition: background-color var(--transition-fast);
+}
+
+.card-tile:hover .card-button {
+    background-color: var(--color-primary-hover);
+}
+
+/* STRETCHED LINK: Spannt den Klick-Bereich des <a> Tags über die gesamte Karte */
+.card-button::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.card-button .arrow {
+    transition: transform var(--transition-fast);
+}
+
+.card-tile:hover .card-button .arrow {
+    transform: translateX(4px);
+}
+
+/* Desktop Anpassungen */
+@media (min-width: 600px) {
+    .card-content {
+        padding: 24px;
+    }
+    
+    .card-title {
+        font-size: 1.6rem;
+    }
+}

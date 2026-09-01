@@ -7,24 +7,28 @@
     <meta name="robots" content="noindex, nofollow">
     <link rel="icon" type="image/svg+xml"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232c4a3e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M2 13a6 6 0 1 0 12 0 4 4 0 1 0-8 0 2 2 0 0 0 4 0'/><circle cx='10' cy='13' r='8'/><path d='M2 21h12c4.4 0 8-3.6 8-8V7a2 2 0 1 0-4 0v6'/><path d='M18 3 19.1 5.2'/><path d='M22 3 20.9 5.2'/></svg>">
+
+    <!-- 1. Globale Styles -->
     <link rel="stylesheet" type="text/css" href="global.css">
+
+    <!-- 2. Hauptseiten-Spezifische Kachel-Styles -->
+    <link rel="stylesheet" type="text/css" href="index.css">
+
     <title>Schneckenhausen</title>
 </head>
 
 <body>
 
     <header class="site-header">
-        <a href="https://schneckenhausen.com" class="brand-link" title="Zurück zur Startseite">
-            <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="lucide lucide-snail-icon lucide-snail">
+        <a href="https://schneckenhausen.com" class="brand-link" title="Schneckenhausen">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="brand-icon">
                 <path d="M2 13a6 6 0 1 0 12 0 4 4 0 1 0-8 0 2 2 0 0 0 4 0" />
                 <circle cx="10" cy="13" r="8" />
                 <path d="M2 21h12c4.4 0 8-3.6 8-8V7a2 2 0 1 0-4 0v6" />
                 <path d="M18 3 19.1 5.2" />
                 <path d="M22 3 20.9 5.2" />
             </svg>
-
             <span class="brand-title">Schneckenhausen</span>
         </a>
     </header>
@@ -33,30 +37,36 @@
         <div class="grid grid-2">
 
             <!-- Kachel 1: Hochzeit -->
-            <a href="https://hochzeit.schneckenhausen.com" class="card">
-                <div>
+            <article class="card card-tile">
+                <div class="card-image">
+                    <img src="https://hochzeit.schneckenhausen.com/assets/bg.webp" alt="Verlobungsbild"></img>
+                </div>
+                <div class="card-content">
                     <span class="card-badge">Event</span>
                     <h2 class="card-title">Hochzeit</h2>
                     <p class="card-body">Save the Date, Location & alle wichtigen Infos zu unserem großen Tag.</p>
+                    <a href="https://hochzeit.schneckenhausen.com" class="card-button">
+                        <span>Zur Hochzeitsseite</span>
+                        <span class="arrow">&rarr;</span>
+                    </a>
                 </div>
-                <div class="card-footer">
-                    <span>Zur Hochzeitsseite</span>
-                    <span class="arrow">&rarr;</span>
-                </div>
-            </a>
+            </article>
 
             <!-- Kachel 2: Eis-Rezepte -->
-            <a href="https://eis.schneckenhausen.com" class="card">
-                <div>
+            <article class="card card-tile">
+                <div class="card-image">
+                    <img src="assets/creami.webp" alt="Verlobungsbild"></img>
+                </div>
+                <div class="card-content">
                     <span class="card-badge">Rezepte</span>
                     <h2 class="card-title">Ninja Creami Eisrezepte</h2>
-                    <p class="card-body">Unsere besten Proteineis-Kreationen & Zubereitungstipps.</p>
+                    <p class="card-body">Unsere besten Proteineis-Kreationen.</p>
+                    <a href="https://eis.schneckenhausen.com" class="card-button">
+                        <span>Zu den Rezepten</span>
+                        <span class="arrow">&rarr;</span>
+                    </a>
                 </div>
-                <div class="card-footer">
-                    <span>Zu den Rezepten</span>
-                    <span class="arrow">&rarr;</span>
-                </div>
-            </a>
+            </article>
 
         </div>
     </main>
