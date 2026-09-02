@@ -21,6 +21,7 @@
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
     --shadow-md: 0 10px 30px -5px rgba(44, 74, 62, 0.08);
     --shadow-hover: 0 20px 35px -8px rgba(44, 74, 62, 0.15);
+    --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.15);
     
     --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -106,6 +107,13 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     gap: 16px;
+    width: 100%;
+}
+
+.grid-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
     width: 100%;
 }
 
